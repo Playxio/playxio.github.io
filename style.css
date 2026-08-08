@@ -1072,116 +1072,255 @@ footer p{
 }
 
 /* ===========================
-   BANNER EN DIRECTO
+   BANNER DIRECTO
 =========================== */
 
-.live-banner{
-
-    background:linear-gradient(90deg,#8b0000,#ff1f1f);
-
-    color:white;
-
-    padding:10px 30px;
-
-    overflow:hidden;
-
-    transition:.4s;
-
+.live-banner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 30px;
+    box-sizing: border-box;
 }
 
-.hidden-live{
+.live-content {
+    position: relative;
 
-    display:none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 
+    padding: 25px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(70, 10, 110, .75),
+            rgba(15, 5, 25, .95)
+        );
+
+    border: 1px solid rgba(138, 44, 255, .65);
+    border-left: 4px solid #ff1744;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 20px rgba(138, 44, 255, .35),
+        0 0 45px rgba(255, 23, 68, .12);
+
+    backdrop-filter: blur(12px);
+
+    overflow: hidden;
+
+    transition: .35s;
 }
 
-.live-content{
+.live-content::before {
+    content: "";
 
-    max-width:1300px;
+    position: absolute;
 
-    margin:auto;
+    top: 0;
+    left: -100%;
 
-    display:flex;
+    width: 60%;
+    height: 100%;
 
-    align-items:center;
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255,255,255,.12),
+        transparent
+    );
 
-    justify-content:space-between;
+    transform: skewX(-25deg);
 
-    gap:25px;
-
+    animation: liveShine 4s infinite;
 }
 
-.live-dot{
+.live-content:hover {
+    transform: translateY(-4px);
 
-    width:16px;
-
-    height:16px;
-
-    background:#fff;
-
-    border-radius:50%;
-
-    animation:pulseLive 1.2s infinite;
-
+    box-shadow:
+        0 0 25px rgba(138, 44, 255, .55),
+        0 0 60px rgba(255, 23, 68, .2);
 }
 
-.live-content h3{
-
-    font-size:18px;
-
-    margin-bottom:6px;
-
+.live-text {
+    flex: 1;
 }
 
-.live-content p{
+.live-text h3 {
+    margin: 0 0 8px;
 
-    color:#ffecec;
-    font-size:14px;
-margin-top:3px;
+    color: white;
 
+    font-size: 24px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 8px rgba(255, 23, 68, .8),
+        0 0 20px rgba(138, 44, 255, .5);
 }
 
-.live-content a{
+.live-text p {
+    margin: 0;
 
-    text-decoration:none;
+    color: #cfc4e8;
 
-    color:white;
-
-    background:rgba(255,255,255,.15);
-
-    padding:14px 24px;
-
-    border-radius:12px;
-
-    font-weight:bold;
-
-    transition:.3s;
-
+    font-size: 16px;
 }
 
-.live-content a:hover{
+.live-dot {
+    width: 15px;
+    height: 15px;
 
-    background:white;
+    flex-shrink: 0;
 
-    color:#d10000;
+    background: #ff1744;
 
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 8px #ff1744,
+        0 0 20px #ff1744;
+
+    animation: livePulse 1.2s infinite;
 }
 
-@keyframes pulseLive{
+#live-link {
+    position: relative;
+    z-index: 2;
 
-    0%{
-        transform:scale(1);
-        opacity:1;
+    display: inline-block;
+
+    padding: 14px 24px;
+
+    color: white;
+
+    text-decoration: none;
+
+    background: linear-gradient(
+        90deg,
+        #d50032,
+        #ff1744
+    );
+
+    border-radius: 12px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 0 15px rgba(255, 23, 68, .45);
+
+    transition: .3s;
+}
+
+#live-link:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 0 20px #ff1744,
+        0 0 40px rgba(255, 23, 68, .55);
+}
+
+/* ===========================
+   ANIMACIONES DIRECTO
+=========================== */
+
+@keyframes livePulse {
+
+    0% {
+        transform: scale(1);
+        opacity: 1;
     }
 
-    50%{
-        transform:scale(1.4);
-        opacity:.4;
+    50% {
+        transform: scale(1.35);
+        opacity: .65;
     }
 
-    100%{
-        transform:scale(1);
-        opacity:1;
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+@keyframes liveShine {
+
+    0% {
+        left: -100%;
+    }
+
+    45% {
+        left: 130%;
+    }
+
+    100% {
+        left: 130%;
+    }
+
+}
+
+/* ===========================
+   OCULTAR CUANDO NO HAY DIRECTO
+=========================== */
+
+.hidden-live {
+    display: none !important;
+}
+
+
+/* ===========================
+   MÓVIL
+=========================== */
+
+@media (max-width: 700px) {
+
+    .live-banner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    }
+    
+
+    .live-content {
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 22px;
+        gap: 18px;
+    }
+
+    .live-dot {
+        position: absolute;
+
+        top: 22px;
+        right: 22px;
+    }
+
+    .live-text h3 {
+        font-size: 20px;
+
+        padding-right: 25px;
+    }
+
+    .live-text p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    #live-link {
+        width: 100%;
+        box-sizing: border-box;
+
+        text-align: center;
     }
 
 }
@@ -2341,4 +2480,154 @@ html {
 
 .menu-toggle:hover {
     transform: scale(1.1);
+}
+
+/* ===========================
+   CONTACTO
+=========================== */
+
+.contact-section {
+    width: 100%;
+    padding: 120px 30px;
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(138, 44, 255, .16),
+            transparent 60%
+        );
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    padding: 60px 40px;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, .035);
+
+    border: 1px solid rgba(138, 44, 255, .35);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 0 30px rgba(138, 44, 255, .18),
+        inset 0 0 40px rgba(138, 44, 255, .04);
+}
+
+.contact-container h2 {
+    margin: 0 0 20px;
+
+    color: white;
+
+    font-size: 48px;
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    text-shadow:
+        0 0 10px #fff,
+        0 0 25px #8a2cff,
+        0 0 50px #8a2cff;
+}
+
+.contact-container p {
+    max-width: 700px;
+
+    margin: 0 auto 40px;
+
+    color: #cfc6df;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.contact-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+}
+
+.contact-buttons a {
+    min-width: 180px;
+
+    padding: 16px 25px;
+
+    box-sizing: border-box;
+
+    color: white;
+
+    text-decoration: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6d1fff,
+            #a24dff
+        );
+
+    border: 1px solid rgba(255,255,255,.12);
+
+    border-radius: 13px;
+
+    font-size: 17px;
+    font-weight: 800;
+
+    box-shadow:
+        0 0 18px rgba(138,44,255,.3);
+
+    transition: .3s;
+}
+
+.contact-buttons a:hover {
+    transform: translateY(-5px) scale(1.04);
+
+    box-shadow:
+        0 0 20px #8a2cff,
+        0 0 45px rgba(138,44,255,.6);
+}
+
+
+/* ===========================
+   CONTACTO - MÓVIL
+=========================== */
+
+@media (max-width: 700px) {
+
+    .contact-section {
+        padding: 80px 15px;
+    }
+
+    .contact-container {
+        padding: 45px 20px;
+    }
+
+    .contact-container h2 {
+        font-size: 34px;
+        letter-spacing: 2px;
+    }
+
+    .contact-container p {
+        font-size: 16px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+    }
+
+    .contact-buttons a {
+        width: 100%;
+    }
+
 }
