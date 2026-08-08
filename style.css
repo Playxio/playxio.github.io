@@ -51,6 +51,13 @@ body{
     font-size:28px;
     font-weight:800;
     letter-spacing:2px;
+    color:#ffffff !important;
+    text-decoration:none !important;
+}
+
+.nav-logo a{
+    color:#ffffff !important;
+    text-decoration:none !important;
 }
 
 .nav-links{
