@@ -1,59 +1,473 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playxio</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Playxio</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<section class="hero">
+    <!-- NAVBAR -->
 
-<div class="container">
+    <nav class="navbar">
 
-<div class="left">
+    <div class="nav-logo">
+        <img src="img/logo.png" alt="Playxio">
+        <span>PLAYXIO</span>
+    </div>
 
-<img src="https://via.placeholder.com/550x700?text=PERSONAJES" alt="Playxio">
+    <div class="nav-links">
+
+        <a href="#inicio">Inicio</a>
+
+        <a href="https://www.youtube.com/@playxio-one1" target="_blank">
+            YouTube
+        </a>
+
+        <a href="https://www.tiktok.com/@playxio" target="_blank">
+            TikTok
+        </a>
+
+        <a href="https://discord.gg/p8BjdYQec" target="_blank">
+            Discord
+        </a>
+
+        <a href="#contacto">
+            Contacto
+        </a>
+
+    </div>
+
+    <button class="menu-toggle" aria-label="Abrir menú">
+        ☰
+    </button>
+
+</nav>
+
+<div class="mobile-menu">
+
+    <a href="#inicio">Inicio</a>
+
+    <a href="https://www.youtube.com/@playxio-one1" target="_blank">
+        YouTube
+    </a>
+
+    <a href="https://www.tiktok.com/@playxio" target="_blank">
+        TikTok
+    </a>
+
+    <a href="https://discord.gg/p8BjdYQec" target="_blank">
+        Discord
+    </a>
+
+    <a href="#contacto">
+        Contacto
+    </a>
 
 </div>
 
-<div class="right">
+    <section id="live-banner" class="live-banner hidden-live">
 
-<h1>PLAYXIO</h1>
+    <div class="live-content">
 
-<p>GTA RP • FiveM • Directos • Comunidad</p>
+        <span class="live-dot"></span>
 
-<div class="buttons">
+        <div>
 
-<a href="https://www.youtube.com/@playxio-one1" target="_blank">
-📺 YouTube
+            <h3>PLAYXIO ESTÁ EN DIRECTO</h3>
+
+            <p>¡Ven al stream y participa en el chat!</p>
+
+        </div>
+
+        <a id="live-link"
+           href="#"
+           target="_blank">
+           🔴 VER DIRECTO
+        </a>
+
+    </div>
+
+</section>
+
+    <!-- HERO -->
+
+    <section class="about" id="inicio">
+
+    
+
+</section>
+
+        <div class="container">
+
+            <div class="left">
+                <img src="img/personajes.png" alt="Playxio">
+            </div>
+
+            <div class="right">
+
+                <img class="logo" src="img/logo.png" alt="Logo Playxio">
+
+                <h1>PLAYXIO</h1>
+
+                <h2>CREADOR DE CONTENIDO</h2>
+
+                <p>GTA RP • FiveM • Directos • Comunidad</p>
+
+                <div class="buttons">
+
+                    <a href="https://www.youtube.com/@playxio-one1" target="_blank">
+                        📺 YouTube
+                    </a>
+
+                    <a href="https://discord.gg/p8BjdYQec" target="_blank">
+    💬 Discord
 </a>
 
-<a href="#">
-💬 Discord
+<a href="https://www.tiktok.com/@playxio" target="_blank">
+    🎵 TikTok
 </a>
 
-<a href="#">
-🎵 TikTok
+<a href="https://www.facebook.com/profile.php?id=61591892199629" target="_blank">
+    📘 Facebook
 </a>
 
-<a href="#">
-📘 Facebook
-</a>
+                </div>
 
+            </div>
+
+        </div>
+
+    </section>
+    <section class="about hidden">
+
+    <h2>¿Quién es Playxio?</h2>
+
+    <p>
+        Soy creador de contenido especializado en GTA Roleplay, FiveM y videojuegos.
+        Aquí encontrarás directos, series, clips, eventos y una comunidad donde
+        siempre hay algo nuevo que descubrir.
+    </p>
+
+    <section class="featured-video hidden">
+
+    <h2>🎥 Último vídeo</h2>
+
+    <div id="featured-video">
+        <p>Cargando vídeo...</p>
+    </div>
+
+</section>
+    <section class="videos hidden">
+
+    <h2>🎬 Últimos vídeos</h2>
+
+    <div id="youtube-videos" class="videos-grid">
+
+        <p>Cargando vídeos...</p>
+
+    </div>
+
+    <section class="shorts hidden">
+
+    <h2>📱 Últimos Shorts</h2>
+
+    <div id="youtube-shorts" class="shorts-grid">
+        <p>Cargando Shorts...</p>
+    </div>
+
+</section>
+
+<section class="community hidden">
+
+    <div class="community-content">
+
+        <span class="community-label">💜 ÚNETE A LA COMUNIDAD</span>
+
+        <h2>VIVE PLAYXIO MÁS ALLÁ DEL DIRECTO</h2>
+
+        <p>
+            Noticias, avisos, clips, eventos y toda la comunidad
+            de Playxio en un mismo sitio.
+        </p>
+
+        <div class="community-buttons">
+
+            <a
+                href="https://discord.gg/p8BjdYQec"
+                target="_blank"
+            >
+                💬 UNIRME A DISCORD
+            </a>
+
+            <a
+                href="https://www.tiktok.com/@playxio"
+                target="_blank"
+            >
+                🎵 SEGUIR EN TIKTOK
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</section>
+    <section class="cards">
+
+    <div class="card">
+        <h3>🎮 GTA Roleplay</h3>
+        <p>
+            Series, clips, eventos y todo el contenido relacionado con FiveM.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>📺 Directos</h3>
+        <p>
+            Streams en directo con la comunidad, desafíos y mucho más.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>👥 Comunidad</h3>
+        <p>
+            Únete a Discord, participa en eventos y forma parte de Playxio.
+        </p>
+    </div>
+
+</section>
+<section class="cards">
+
+    <div class="card">
+        <div class="icon">🎮</div>
+
+        <h3>GTA Roleplay</h3>
+
+        <p>
+            Series, clips, persecuciones, eventos y las mejores historias de FiveM.
+        </p>
+
+        <a href="#">Ver contenido →</a>
+    </div>
+
+    <div class="card">
+        <div class="icon">📺</div>
+
+        <h3>Directos</h3>
+
+        <p>
+            Todos mis streams, horarios y próximos eventos en directo.
+        </p>
+
+        <a href="#">Ver directos →</a>
+    </div>
+
+    <div class="card">
+        <div class="icon">👥</div>
+
+        <h3>Comunidad</h3>
+
+        <p>
+            Únete a Discord, participa en eventos y conoce a la comunidad.
+        </p>
+
+        <a href="#">Entrar →</a>
+    </div>
+
+</section>
+<section class="latest-video">
+
+    <h2>🎬 Último vídeo</h2>
+
+    <div class="video-box">
+
+        <div class="video-thumbnail">
+            <img src="img/personajes.png" alt="Último vídeo">
+        </div>
+
+        <div class="video-info">
+
+            <h3>Mi última aventura en GTA Roleplay</h3>
+
+            <p>
+                Descubre las mejores persecuciones, momentos épicos y situaciones
+                inesperadas vividas en FiveM junto a la comunidad.
+            </p>
+
+            <a href="https://www.youtube.com/@playxio-one1" target="_blank">
+                ▶ Ver en YouTube
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="streams">
+
+    <h2>🔴 Próximos Directos</h2>
+
+    <div class="stream-grid">
+
+        <div class="stream-card">
+            <span class="day">Lunes</span>
+            <h3>GTA Roleplay</h3>
+            <p>20:00 - 23:00</p>
+        </div>
+
+        <div class="stream-card">
+            <span class="day">Miércoles</span>
+            <h3>FiveM Eventos</h3>
+            <p>20:00 - 23:00</p>
+        </div>
+
+        <div class="stream-card">
+            <span class="day">Viernes</span>
+            <h3>Directo Especial</h3>
+            <p>21:00 - 00:00</p>
+        </div>
+
+    </div>
+
+</section>
+</section>
+
+<section class="socials">
+
+<h2>Mis Redes</h2>
+
+<div class="social-grid">
+
+<div class="card">
+<h3>🎥 YouTube</h3>
+<p>Directos, series y Shorts.</p>
+<a href="https://youtube.com/@playxio-one1" target="_blank">Entrar</a>
 </div>
 
+<div class="card">
+<h3>🎵 TikTok</h3>
+<p>Los mejores clips cada día.</p>
+<a href="#">Entrar</a>
+</div>
+
+<div class="card">
+<h3>💬 Discord</h3>
+<p>Únete a la comunidad.</p>
+<a href="#">Entrar</a>
+</div>
+
+<div class="card">
+<h3>📘 Facebook</h3>
+<p>Noticias y contenido exclusivo.</p>
+<a href="#">Entrar</a>
 </div>
 
 </div>
 
 </section>
+
+<section class="youtube">
+
+    <h2>🎥 Últimos vídeos</h2>
+
+    <div id="youtube-videos" class="youtube-grid">
+
+        <p>Cargando vídeos...</p>
+
+    </div>
+
+</section>
+<section class="stats hidden">
+
+    <h2>Playxio en números</h2>
+
+    <div class="stats-grid">
+
+        <div class="stat">
+            <span class="number" id="youtube-subs">0</span>
+            <p>Suscriptores</p>
+        </div>
+
+        <div class="stat">
+            <span class="number" id="youtube-views">0</span>
+            <p>Visualizaciones</p>
+        </div>
+
+        <div class="stat">
+            <span class="number" id="youtube-count">0</span>
+            <p>Vídeos publicados</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<footer class="footer" id="contacto">
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+
+            <img src="img/logo.png" alt="Playxio">
+
+            <h3>PLAYXIO</h3>
+
+            <p>
+                Creador de contenido · GTA RP · Gaming · Directos
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="https://www.youtube.com/@playxio-one1" target="_blank">
+                YouTube
+            </a>
+
+            <a href="https://discord.gg/p8BjdYQec" target="_blank">
+                Discord
+            </a>
+
+            <a href="https://www.tiktok.com/@playxio" target="_blank">
+                TikTok
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61591892199629" target="_blank">
+                Facebook
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Playxio. Todos los derechos reservados.
+        </p>
+
+        <p>
+            Hecho con 💜 para la comunidad Playxio
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="config.js"></script>
+<script src="youtube.js"></script>
+<script src="live.js"></script>
+<script src="script.js"></script>
 
 </body>
 
